@@ -5,6 +5,9 @@ import DoctorLogin from '../views/DoctorLogin.vue';
 import DoctorRoom from '../views/DoctorRoom.vue';
 import Doctors from '../views/Doctors.vue';
 import About from '../views/About.vue';
+import PatientAppointments from '../views/PatientAppointments.vue';
+import DoctorAppointments from '../views/DoctorAppointments.vue';
+import { store } from '../store';
 
 const routes: RouteRecordRaw[] = [
   {
@@ -33,6 +36,12 @@ const routes: RouteRecordRaw[] = [
     component: About,
   },
   {
+    path: '/appointments',
+    name: 'PatientAppointments',
+    component: PatientAppointments,
+    meta: { requiresPatientAuth: true },
+  },
+  {
     path: '/doctor/login',
     name: 'DoctorLogin',
     component: DoctorLogin,
@@ -42,11 +51,33 @@ const routes: RouteRecordRaw[] = [
     name: 'DoctorRoom',
     component: DoctorRoom,
   },
+  {
+    path: '/doctor/appointments/:username',
+    name: 'DoctorAppointments',
+    component: DoctorAppointments,
+    meta: { requiresDoctorAuth: true },
+  },
 ];
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
+});
+
+router.beforeEach((to, _from, next) => {
+  if (to.meta.requiresPatientAuth) {
+    if (!store.state.currentPatient) {
+      next({ path: '/consultation', query: { redirect: to.fullPath } });
+      return;
+    }
+  }
+  if (to.meta.requiresDoctorAuth) {
+    if (!store.state.currentDoctor) {
+      next({ path: '/doctor/login', query: { redirect: to.fullPath } });
+      return;
+    }
+  }
+  next();
 });
 
 export default router;

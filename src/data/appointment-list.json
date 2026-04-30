@@ -1,0 +1,41 @@
+[
+  {
+    "id": "apt001",
+    "patientId": "patient001",
+    "patientName": "赵明",
+    "phone": "13800138000",
+    "doctorId": "doc001",
+    "doctorName": "张伟医生",
+    "scheduleId": "sched-doc001-2026-05-01-morning",
+    "notes": "近期有胸闷症状",
+    "status": "scheduled",
+    "createdAt": "2026-04-28T10:00:00",
+    "cancelledAt": null
+  },
+  {
+    "id": "apt002",
+    "patientId": "patient002",
+    "patientName": "孙丽",
+    "phone": "13900139000",
+    "doctorId": "doc002",
+    "doctorName": "李娜医生",
+    "scheduleId": "sched-doc002-2026-05-01-afternoon",
+    "notes": "孩子咳嗽持续一周",
+    "status": "completed",
+    "createdAt": "2026-04-27T15:30:00",
+    "cancelledAt": null
+  },
+  {
+    "id": "apt003",
+    "patientId": "patient003",
+    "patientName": "周杰",
+    "phone": "13700137000",
+    "doctorId": "doc003",
+    "doctorName": "王强医生",
+    "scheduleId": "sched-doc003-2026-05-01-morning",
+    "notes": "打篮球后脚踝扭伤",
+    "status": "cancelled",
+    "createdAt": "2026-04-26T09:00:00",
+    "cancelledAt": "2026-04-27T08:00:00"
+  }
+]

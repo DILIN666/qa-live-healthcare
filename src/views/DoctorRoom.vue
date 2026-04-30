@@ -21,6 +21,27 @@
         </div>
       </div>
 
+      <a-tabs v-model:activeKey="activeTab" class="room-tabs">
+        <a-tab-pane key="pending" tab="待回复问题" />
+        <a-tab-pane key="answered" tab="已回复问题" />
+        <a-tab-pane key="appointments" tab="预约管理" />
+      </a-tabs>
+
+      <div v-if="activeTab === 'appointments'" class="appointments-panel">
+        <a-result
+          status="success"
+          title="预约管理系统已就绪"
+          sub-title="点击下方按钮进入预约管理页面，查看和管理您的患者预约记录。"
+        >
+          <template #extra>
+            <a-button type="primary" @click="goToAppointmentManagement">
+              进入预约管理
+            </a-button>
+          </template>
+        </a-result>
+      </div>
+
+      <template v-if="activeTab !== 'appointments'">
       <div class="room-url">
         <a-alert
           :message="`诊室URL: ${roomUrl}`"
@@ -87,6 +108,7 @@
         </a-collapse>
         <a-empty v-else description="暂无已解答问题" />
       </div>
+      </template>
     </div>
 
     <a-modal
@@ -151,6 +173,7 @@ const answerModalVisible = ref(false);
 const selectedQuestion = ref<Question | null>(null);
 const answerText = ref('');
 const submitting = ref(false);
+const activeTab = ref('pending');
 
 onMounted(() => {
   if (!currentDoctor.value || currentDoctor.value.username !== username) {
@@ -212,6 +235,10 @@ const markAsAnswered = (questionId: string) => {
   store.markQuestionAsAnswered(questionId);
   message.success('已标记为已解答');
 };
+
+const goToAppointmentManagement = () => {
+  router.push(`/doctor/appointments/${username}`);
+};
 </script>
 
 <style scoped>
@@ -270,6 +297,20 @@ const markAsAnswered = (questionId: string) => {
 }
 
 .room-url {
+  margin-bottom: 24px;
+}
+
+.room-tabs {
+  background: #fff;
+  border-radius: 12px 12px 0 0;
+  padding: 0 24px;
+  margin-bottom: 0;
+}
+
+.appointments-panel {
+  background: #fff;
+  border-radius: 0 0 12px 12px;
+  padding: 24px;
   margin-bottom: 24px;
 }
 

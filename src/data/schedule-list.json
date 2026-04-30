@@ -1,0 +1,266 @@
+[
+  {
+    "id": "sched-doc001-2026-05-01-morning",
+    "doctorId": "doc001",
+    "date": "2026-05-01",
+    "timeSlot": "morning",
+    "totalSlots": 5,
+    "bookedSlots": 3
+  },
+  {
+    "id": "sched-doc001-2026-05-01-afternoon",
+    "doctorId": "doc001",
+    "date": "2026-05-01",
+    "timeSlot": "afternoon",
+    "totalSlots": 5,
+    "bookedSlots": 5
+  },
+  {
+    "id": "sched-doc001-2026-05-01-evening",
+    "doctorId": "doc001",
+    "date": "2026-05-01",
+    "timeSlot": "evening",
+    "totalSlots": 5,
+    "bookedSlots": 1
+  },
+  {
+    "id": "sched-doc001-2026-05-02-morning",
+    "doctorId": "doc001",
+    "date": "2026-05-02",
+    "timeSlot": "morning",
+    "totalSlots": 5,
+    "bookedSlots": 2
+  },
+  {
+    "id": "sched-doc001-2026-05-02-afternoon",
+    "doctorId": "doc001",
+    "date": "2026-05-02",
+    "timeSlot": "afternoon",
+    "totalSlots": 5,
+    "bookedSlots": 0
+  },
+  {
+    "id": "sched-doc001-2026-05-02-evening",
+    "doctorId": "doc001",
+    "date": "2026-05-02",
+    "timeSlot": "evening",
+    "totalSlots": 5,
+    "bookedSlots": 4
+  },
+  {
+    "id": "sched-doc001-2026-05-03-morning",
+    "doctorId": "doc001",
+    "date": "2026-05-03",
+    "timeSlot": "morning",
+    "totalSlots": 5,
+    "bookedSlots": 5
+  },
+  {
+    "id": "sched-doc001-2026-05-03-afternoon",
+    "doctorId": "doc001",
+    "date": "2026-05-03",
+    "timeSlot": "afternoon",
+    "totalSlots": 5,
+    "bookedSlots": 3
+  },
+  {
+    "id": "sched-doc001-2026-05-03-evening",
+    "doctorId": "doc001",
+    "date": "2026-05-03",
+    "timeSlot": "evening",
+    "totalSlots": 5,
+    "bookedSlots": 2
+  },
+  {
+    "id": "sched-doc002-2026-05-01-morning",
+    "doctorId": "doc002",
+    "date": "2026-05-01",
+    "timeSlot": "morning",
+    "totalSlots": 5,
+    "bookedSlots": 4
+  },
+  {
+    "id": "sched-doc002-2026-05-01-afternoon",
+    "doctorId": "doc002",
+    "date": "2026-05-01",
+    "timeSlot": "afternoon",
+    "totalSlots": 5,
+    "bookedSlots": 5
+  },
+  {
+    "id": "sched-doc002-2026-05-01-evening",
+    "doctorId": "doc002",
+    "date": "2026-05-01",
+    "timeSlot": "evening",
+    "totalSlots": 5,
+    "bookedSlots": 2
+  },
+  {
+    "id": "sched-doc002-2026-05-02-morning",
+    "doctorId": "doc002",
+    "date": "2026-05-02",
+    "timeSlot": "morning",
+    "totalSlots": 5,
+    "bookedSlots": 1
+  },
+  {
+    "id": "sched-doc002-2026-05-02-afternoon",
+    "doctorId": "doc002",
+    "date": "2026-05-02",
+    "timeSlot": "afternoon",
+    "totalSlots": 5,
+    "bookedSlots": 3
+  },
+  {
+    "id": "sched-doc002-2026-05-02-evening",
+    "doctorId": "doc002",
+    "date": "2026-05-02",
+    "timeSlot": "evening",
+    "totalSlots": 5,
+    "bookedSlots": 0
+  },
+  {
+    "id": "sched-doc002-2026-05-03-morning",
+    "doctorId": "doc002",
+    "date": "2026-05-03",
+    "timeSlot": "morning",
+    "totalSlots": 5,
+    "bookedSlots": 2
+  },
+  {
+    "id": "sched-doc002-2026-05-03-afternoon",
+    "doctorId": "doc002",
+    "date": "2026-05-03",
+    "timeSlot": "afternoon",
+    "totalSlots": 5,
+    "bookedSlots": 5
+  },
+  {
+    "id": "sched-doc002-2026-05-03-evening",
+    "doctorId": "doc002",
+    "date": "2026-05-03",
+    "timeSlot": "evening",
+    "totalSlots": 5,
+    "bookedSlots": 4
+  },
+  {
+    "id": "sched-doc003-2026-05-01-morning",
+    "doctorId": "doc003",
+    "date": "2026-05-01",
+    "timeSlot": "morning",
+    "totalSlots": 5,
+    "bookedSlots": 3
+  },
+  {
+    "id": "sched-doc003-2026-05-01-afternoon",
+    "doctorId": "doc003",
+    "date": "2026-05-01",
+    "timeSlot": "afternoon",
+    "totalSlots": 5,
+    "bookedSlots": 1
+  },
+  {
+    "id": "sched-doc003-2026-05-01-evening",
+    "doctorId": "doc003",
+    "date": "2026-05-01",
+    "timeSlot": "evening",
+    "totalSlots": 5,
+    "bookedSlots": 0
+  },
+  {
+    "id": "sched-doc004-2026-05-02-morning",
+    "doctorId": "doc004",
+    "date": "2026-05-02",
+    "timeSlot": "morning",
+    "totalSlots": 5,
+    "bookedSlots": 2
+  },
+  {
+    "id": "sched-doc004-2026-05-02-afternoon",
+    "doctorId": "doc004",
+    "date": "2026-05-02",
+    "timeSlot": "afternoon",
+    "totalSlots": 5,
+    "bookedSlots": 4
+  },
+  {
+    "id": "sched-doc004-2026-05-02-evening",
+    "doctorId": "doc004",
+    "date": "2026-05-02",
+    "timeSlot": "evening",
+    "totalSlots": 5,
+    "bookedSlots": 1
+  },
+  {
+    "id": "sched-doc005-2026-05-01-morning",
+    "doctorId": "doc005",
+    "date": "2026-05-01",
+    "timeSlot": "morning",
+    "totalSlots": 5,
+    "bookedSlots": 3
+  },
+  {
+    "id": "sched-doc005-2026-05-01-afternoon",
+    "doctorId": "doc005",
+    "date": "2026-05-01",
+    "timeSlot": "afternoon",
+    "totalSlots": 5,
+    "bookedSlots": 0
+  },
+  {
+    "id": "sched-doc005-2026-05-01-evening",
+    "doctorId": "doc005",
+    "date": "2026-05-01",
+    "timeSlot": "evening",
+    "totalSlots": 5,
+    "bookedSlots": 2
+  },
+  {
+    "id": "sched-doc005-2026-05-02-morning",
+    "doctorId": "doc005",
+    "date": "2026-05-02",
+    "timeSlot": "morning",
+    "totalSlots": 5,
+    "bookedSlots": 5
+  },
+  {
+    "id": "sched-doc005-2026-05-02-afternoon",
+    "doctorId": "doc005",
+    "date": "2026-05-02",
+    "timeSlot": "afternoon",
+    "totalSlots": 5,
+    "bookedSlots": 1
+  },
+  {
+    "id": "sched-doc005-2026-05-02-evening",
+    "doctorId": "doc005",
+    "date": "2026-05-02",
+    "timeSlot": "evening",
+    "totalSlots": 5,
+    "bookedSlots": 3
+  },
+  {
+    "id": "sched-doc005-2026-05-03-morning",
+    "doctorId": "doc005",
+    "date": "2026-05-03",
+    "timeSlot": "morning",
+    "totalSlots": 5,
+    "bookedSlots": 0
+  },
+  {
+    "id": "sched-doc005-2026-05-03-afternoon",
+    "doctorId": "doc005",
+    "date": "2026-05-03",
+    "timeSlot": "afternoon",
+    "totalSlots": 5,
+    "bookedSlots": 2
+  },
+  {
+    "id": "sched-doc005-2026-05-03-evening",
+    "doctorId": "doc005",
+    "date": "2026-05-03",
+    "timeSlot": "evening",
+    "totalSlots": 5,
+    "bookedSlots": 4
+  }
+]

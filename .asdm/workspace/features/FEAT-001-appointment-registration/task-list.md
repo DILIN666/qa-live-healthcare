@@ -3,7 +3,7 @@
 **Feature ID**: FEAT-001
 **Feature Name**: 预约挂号
 **Created Date**: 2026-04-29
-**Last Updated**: 2026-04-29
+**Last Updated**: 2026-04-30
 **Language**: 简体中文
 
 ---
@@ -12,7 +12,7 @@
 
 | 总任务数 | TODO | 进行中 | 已完成 | 已阻塞 | 已取消 |
 |---------|------|--------|--------|--------|--------|
-| 8       | 8    | 0      | 0      | 0      | 0      |
+| 8       | 0    | 0      | 8      | 0      | 0      |
 
 ---
 
@@ -20,14 +20,14 @@
 
 | 任务 ID | 任务名称 | 状态 | Task PRD | 依赖关系 | 预估工时 | 创建日期 | 更新日期 |
 |---------|---------|------|----------|---------|---------|----------|----------|
-| TASK-001 | 数据模型设计 | TODO | task-prd-TASK-001.md | NONE | 10 min | 2026-04-29 | 2026-04-29 |
-| TASK-002 | Store API 扩展 | TODO | task-prd-TASK-002.md | TASK-001 | 15 min | 2026-04-29 | 2026-04-29 |
-| TASK-003 | Mock 数据创建 | TODO | task-prd-TASK-003.md | TASK-001 | 10 min | 2026-04-29 | 2026-04-29 |
-| TASK-004 | 预约页面开发 | TODO | task-prd-TASK-004.md | TASK-002, TASK-003 | 20 min | 2026-04-29 | 2026-04-29 |
-| TASK-005 | 排班选择组件 | TODO | task-prd-TASK-005.md | TASK-002, TASK-003 | 20 min | 2026-04-29 | 2026-04-29 |
-| TASK-006 | 预约表单组件 | TODO | task-prd-TASK-006.md | TASK-002, TASK-003 | 15 min | 2026-04-29 | 2026-04-29 |
-| TASK-007 | 医生预约列表页 | TODO | task-prd-TASK-007.md | TASK-002, TASK-003 | 15 min | 2026-04-29 | 2026-04-29 |
-| TASK-008 | 路由和导航配置 | TODO | task-prd-TASK-008.md | TASK-004, TASK-005, TASK-006, TASK-007 | 10 min | 2026-04-29 | 2026-04-29 |
+| TASK-001 | 数据模型设计 | **DONE** | task-prd-TASK-001.md | NONE | 10 min | 2026-04-29 | 2026-04-30 |
+| TASK-002 | Store API 扩展 | **DONE** | task-prd-TASK-002.md | TASK-001 | 15 min | 2026-04-29 | 2026-04-30 |
+| TASK-003 | Mock 数据创建 | **DONE** | task-prd-TASK-003.md | TASK-001 | 10 min | 2026-04-29 | 2026-04-30 |
+| TASK-004 | 预约页面开发 | **DONE** | task-prd-TASK-004.md | TASK-002, TASK-003 | 20 min | 2026-04-29 | 2026-04-30 |
+| TASK-005 | 排班选择组件 | **DONE** | task-prd-TASK-005.md | TASK-002, TASK-003 | 20 min | 2026-04-29 | 2026-04-30 |
+| TASK-006 | 预约表单组件 | **DONE** | task-prd-TASK-006.md | TASK-002, TASK-003 | 15 min | 2026-04-29 | 2026-04-30 |
+| TASK-007 | 医生预约列表页 | **DONE** | task-prd-TASK-007.md | TASK-002, TASK-003 | 15 min | 2026-04-29 | 2026-04-30 |
+| TASK-008 | 路由和导航配置 | **DONE** | task-prd-TASK-008.md | TASK-004, TASK-005, TASK-006, TASK-007 | 10 min | 2026-04-29 | 2026-04-30 |
 
 ---
 
@@ -254,7 +254,15 @@ graph TD
 |------|---------|---------|
 | 2026-04-29 | 全部 | 创建任务清单，8 个任务全部生成 |
 | 2026-04-29 | 全部 | 为 8 个任务生成详细 Task PRD 文档 |
+| 2026-04-30 | TASK-001 | 创建 src/types/appointment.ts，完成数据模型设计 |
+| 2026-04-30 | TASK-002 | 扩展 src/store/index.ts，添加预约状态和方法 |
+| 2026-04-30 | TASK-003 | 创建 src/data/schedule-list.json 和 appointment-list.json |
+| 2026-04-30 | TASK-004 | 创建 src/views/PatientAppointments.vue 患者预约记录页 |
+| 2026-04-30 | TASK-005 | 创建 src/components/SchedulePicker.vue 排班选择器组件 |
+| 2026-04-30 | TASK-006 | 创建 src/components/AppointmentForm.vue 预约表单组件 |
+| 2026-04-30 | TASK-007 | 创建 src/views/DoctorAppointments.vue 医生预约管理页 |
+| 2026-04-30 | TASK-008 | 配置路由和导航入口（router + AppHeader + DoctorRoom）|
 
 ---
 
-*最后更新：2026-04-29*
+*最后更新：2026-04-30*

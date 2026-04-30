@@ -22,6 +22,10 @@
           <InfoCircleOutlined />
           关于
         </a-menu-item>
+        <a-menu-item v-if="currentPatient" key="appointments" @click="navigateTo('/appointments')">
+          <CalendarOutlined />
+          我的预约
+        </a-menu-item>
       </a-menu>
       <a-button type="primary" class="login-btn" @click="navigateTo('/doctor/login')">
         <UserOutlined />
@@ -32,13 +36,16 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue';
+import { ref, watch, computed } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
-import { HomeOutlined, MessageOutlined, TeamOutlined, InfoCircleOutlined, UserOutlined } from '@ant-design/icons-vue';
+import { HomeOutlined, MessageOutlined, TeamOutlined, InfoCircleOutlined, UserOutlined, CalendarOutlined } from '@ant-design/icons-vue';
+import { store } from '../store';
 
 const router = useRouter();
 const route = useRoute();
 const selectedKeys = ref<string[]>(['home']);
+
+const currentPatient = computed(() => store.state.currentPatient);
 
 watch(() => route.path, (newPath) => {
   if (newPath === '/') {
@@ -49,6 +56,8 @@ watch(() => route.path, (newPath) => {
     selectedKeys.value = ['doctors'];
   } else if (newPath.startsWith('/about')) {
     selectedKeys.value = ['about'];
+  } else if (newPath.startsWith('/appointments')) {
+    selectedKeys.value = ['appointments'];
   }
 }, { immediate: true });
 
