@@ -1,0 +1,83 @@
+[
+  {
+    "id": "sch001",
+    "doctorId": "doc001",
+    "doctorName": "张伟医生",
+    "date": "2026-05-10",
+    "timeSlot": "morning",
+    "totalSlots": 20,
+    "bookedCount": 2
+  },
+  {
+    "id": "sch002",
+    "doctorId": "doc001",
+    "doctorName": "张伟医生",
+    "date": "2026-05-10",
+    "timeSlot": "afternoon",
+    "totalSlots": 15,
+    "bookedCount": 1
+  },
+  {
+    "id": "sch003",
+    "doctorId": "doc002",
+    "doctorName": "李娜医生",
+    "date": "2026-05-11",
+    "timeSlot": "morning",
+    "totalSlots": 25,
+    "bookedCount": 0
+  },
+  {
+    "id": "sch004",
+    "doctorId": "doc003",
+    "doctorName": "王强医生",
+    "date": "2026-05-11",
+    "timeSlot": "afternoon",
+    "totalSlots": 20,
+    "bookedCount": 0
+  },
+  {
+    "id": "sch005",
+    "doctorId": "doc005",
+    "doctorName": "陈杰医生",
+    "date": "2026-05-12",
+    "timeSlot": "morning",
+    "totalSlots": 15,
+    "bookedCount": 1
+  },
+  {
+    "id": "sch006",
+    "doctorId": "doc001",
+    "doctorName": "张伟医生",
+    "date": "2026-05-13",
+    "timeSlot": "morning",
+    "totalSlots": 20,
+    "bookedCount": 0
+  },
+  {
+    "id": "sch007",
+    "doctorId": "doc002",
+    "doctorName": "李娜医生",
+    "date": "2026-05-13",
+    "timeSlot": "afternoon",
+    "totalSlots": 25,
+    "bookedCount": 0
+  },
+  {
+    "id": "sch008",
+    "doctorId": "doc003",
+    "doctorName": "王强医生",
+    "date": "2026-05-14",
+    "timeSlot": "morning",
+    "totalSlots": 20,
+    "bookedCount": 0
+  },
+  {
+    "id": "sch009",
+    "doctorId": "doc005",
+    "doctorName": "陈杰医生",
+    "date": "2026-05-15",
+    "timeSlot": "afternoon",
+    "totalSlots": 15,
+    "bookedCount": 0
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "appt001",
+    "scheduleId": "sch001",
+    "patientId": "patient001",
+    "patientName": "赵明",
+    "doctorId": "doc001",
+    "doctorName": "张伟医生",
+    "date": "2026-05-10",
+    "timeSlot": "morning",
+    "status": "booked",
+    "symptoms": "最近胸闷，想做检查",
+    "createTime": "2026-05-05T10:00:00.000Z",
+    "updateTime": "2026-05-05T10:00:00.000Z"
+  },
+  {
+    "id": "appt002",
+    "scheduleId": "sch001",
+    "patientId": "patient002",
+    "patientName": "孙丽",
+    "doctorId": "doc001",
+    "doctorName": "张伟医生",
+    "date": "2026-05-10",
+    "timeSlot": "morning",
+    "status": "booked",
+    "symptoms": "心脏不适，需要复查",
+    "createTime": "2026-05-05T11:00:00.000Z",
+    "updateTime": "2026-05-05T11:00:00.000Z"
+  },
+  {
+    "id": "appt003",
+    "scheduleId": "sch002",
+    "patientId": "patient003",
+    "patientName": "周杰",
+    "doctorId": "doc001",
+    "doctorName": "张伟医生",
+    "date": "2026-05-10",
+    "timeSlot": "afternoon",
+    "status": "booked",
+    "symptoms": "血压偏高，需要调药",
+    "createTime": "2026-05-05T14:00:00.000Z",
+    "updateTime": "2026-05-05T14:00:00.000Z"
+  },
+  {
+    "id": "appt004",
+    "scheduleId": "sch003",
+    "patientId": "patient004",
+    "patientName": "吴芳",
+    "doctorId": "doc002",
+    "doctorName": "李娜医生",
+    "date": "2026-05-11",
+    "timeSlot": "morning",
+    "status": "completed",
+    "symptoms": "孩子咳嗽，需要检查",
+    "createTime": "2026-05-04T09:00:00.000Z",
+    "updateTime": "2026-05-11T10:30:00.000Z"
+  },
+  {
+    "id": "appt005",
+    "scheduleId": "sch005",
+    "patientId": "patient005",
+    "patientName": "郑浩",
+    "doctorId": "doc005",
+    "doctorName": "陈杰医生",
+    "date": "2026-05-12",
+    "timeSlot": "morning",
+    "status": "booked",
+    "symptoms": "胃部不适，食欲下降",
+    "createTime": "2026-05-05T16:00:00.000Z",
+    "updateTime": "2026-05-05T16:00:00.000Z"
+  }
+]

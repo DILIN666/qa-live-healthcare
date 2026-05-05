@@ -96,7 +96,10 @@
             </div>
           </div>
           <div class="room-footer">
-            <a-button type="primary" block>进入诊室</a-button>
+            <a-space direction="vertical" style="width: 100%">
+              <a-button type="primary" block @click.stop="navigateTo(`/consultation/${doctor.username}`)">进入诊室</a-button>
+              <a-button block @click.stop="navigateTo(`/appointments/${doctor.username}`)">预约挂号</a-button>
+            </a-space>
           </div>
         </div>
       </div>
