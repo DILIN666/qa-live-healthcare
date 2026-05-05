@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 import Home from '../views/Home.vue';
 import Consultation from '../views/Consultation.vue';
+import AppointmentRegistration from '../views/AppointmentRegistration.vue';
 import DoctorLogin from '../views/DoctorLogin.vue';
 import DoctorRoom from '../views/DoctorRoom.vue';
 import Doctors from '../views/Doctors.vue';
@@ -21,6 +22,16 @@ const routes: RouteRecordRaw[] = [
     path: '/consultation/:doctorUsername',
     name: 'ConsultationRoom',
     component: Consultation,
+  },
+  {
+    path: '/appointments',
+    name: 'Appointments',
+    component: AppointmentRegistration,
+  },
+  {
+    path: '/appointments/:doctorUsername',
+    name: 'AppointmentDoctor',
+    component: AppointmentRegistration,
   },
   {
     path: '/doctors',

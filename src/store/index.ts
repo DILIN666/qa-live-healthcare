@@ -2,6 +2,8 @@ import { reactive } from 'vue';
 import doctorData from '../data/doctor-user-list.json';
 import patientData from '../data/patient-user.json';
 import questionData from '../data/question-list.json';
+import scheduleData from '../data/schedule-list.json';
+import appointmentData from '../data/appointment-list.json';
 
 export interface Doctor {
   id: string;
@@ -37,10 +39,41 @@ export interface Question {
   answerTime: string | null;
 }
 
+export type TimeSlot = 'morning' | 'afternoon';
+
+export type AppointmentStatus = 'booked' | 'completed' | 'no_show' | 'cancelled';
+
+export interface Schedule {
+  id: string;
+  doctorId: string;
+  doctorName: string;
+  date: string;
+  timeSlot: TimeSlot;
+  totalSlots: number;
+  bookedCount: number;
+}
+
+export interface Appointment {
+  id: string;
+  scheduleId: string;
+  patientId: string;
+  patientName: string;
+  doctorId: string;
+  doctorName: string;
+  date: string;
+  timeSlot: TimeSlot;
+  status: AppointmentStatus;
+  symptoms: string;
+  createTime: string;
+  updateTime: string;
+}
+
 interface State {
   doctors: Doctor[];
   patients: Patient[];
   questions: Question[];
+  schedules: Schedule[];
+  appointments: Appointment[];
   currentDoctor: Doctor | null;
   currentPatient: Patient | null;
 }
@@ -49,6 +82,8 @@ const state = reactive<State>({
   doctors: doctorData as Doctor[],
   patients: patientData as Patient[],
   questions: questionData as Question[],
+  schedules: scheduleData as Schedule[],
+  appointments: appointmentData as Appointment[],
   currentDoctor: null,
   currentPatient: null,
 });
@@ -154,5 +189,77 @@ export const store = {
       activeSessions,
       totalSessions,
     };
+  },
+
+  // Schedule methods
+  getSchedulesByDoctor(doctorId: string): Schedule[] {
+    return state.schedules.filter(s => s.doctorId === doctorId);
+  },
+
+  getSchedulesByDate(date: string): Schedule[] {
+    return state.schedules.filter(s => s.date === date);
+  },
+
+  addSchedule(schedule: Omit<Schedule, 'id' | 'bookedCount'>): Schedule {
+    const newSchedule: Schedule = {
+      ...schedule,
+      id: `schedule${Date.now()}`,
+      bookedCount: 0,
+    };
+    state.schedules.push(newSchedule);
+    return newSchedule;
+  },
+
+  deleteSchedule(scheduleId: string): boolean {
+    const hasBookedAppts = state.appointments.some(
+      a => a.scheduleId === scheduleId && a.status === 'booked'
+    );
+    if (hasBookedAppts) return false;
+    const index = state.schedules.findIndex(s => s.id === scheduleId);
+    if (index === -1) return false;
+    state.schedules.splice(index, 1);
+    return true;
+  },
+
+  // Appointment methods
+  addAppointment(appt: Omit<Appointment, 'id' | 'status' | 'createTime' | 'updateTime'>): Appointment | null {
+    const schedule = state.schedules.find(s => s.id === appt.scheduleId);
+    if (!schedule || schedule.bookedCount >= schedule.totalSlots) return null;
+    const newAppt: Appointment = {
+      ...appt,
+      id: `appt${Date.now()}`,
+      status: 'booked',
+      createTime: new Date().toISOString(),
+      updateTime: new Date().toISOString(),
+    };
+    schedule.bookedCount++;
+    state.appointments.push(newAppt);
+    return newAppt;
+  },
+
+  cancelAppointment(apptId: string): boolean {
+    const appt = state.appointments.find(a => a.id === apptId);
+    if (!appt || appt.status !== 'booked') return false;
+    const schedule = state.schedules.find(s => s.id === appt.scheduleId);
+    if (schedule) schedule.bookedCount--;
+    appt.status = 'cancelled';
+    appt.updateTime = new Date().toISOString();
+    return true;
+  },
+
+  updateAppointmentStatus(apptId: string, status: AppointmentStatus): boolean {
+    const appt = state.appointments.find(a => a.id === apptId);
+    if (!appt) return false;
+    appt.status = status;
+    appt.updateTime = new Date().toISOString();
+    return true;
+  },
+
+  getAppointmentsByDoctor(doctorId: string): Appointment[] {
+    return state.appointments.filter(a => a.doctorId === doctorId);
+  },
+
+  getAppointmentsByPatient(patientId: string): Appointment[] {
+    return state.appointments.filter(a => a.patientId === patientId);
   },
 };
