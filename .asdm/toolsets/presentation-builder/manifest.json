@@ -1,0 +1,20 @@
+{
+  "registry_id": "presentation-builder",
+  "guid": "a7b8c9d0-e1f2-4a3b-8c5d-6e7f8a9b0c1d",
+  "name": "Presentation Builder",
+  "description": "AI-powered presentation planning, structuring, and generation toolset. Create professional slide decks from topics, outlines, or existing documents.",
+  "scenario": "productivity",
+  "version": "0.0.1",
+  "downloadUrl": "presentation-builder.zip",
+  "path": null,
+  "entryPoint": "presentation-builder/README.md",
+  "dateCreated": "2026-05-05T22:37:00Z",
+  "dateUpdated": "2026-05-05T22:37:00Z",
+  "createdBy": "ASDM Platform",
+  "updatedBy": "ASDM Platform",
+  "configType": "toolset",
+  "commands": {
+    "asdm-presentation-planning": "根据主题或大纲规划演示文稿结构",
+    "asdm-presentation-create": "根据规划生成演示文稿文件（.pptx）"
+  }
+}
